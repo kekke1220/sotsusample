@@ -1,0 +1,90 @@
+body {
+ font-family: Arial, sans-serif;
+ background-color: #f4f4f4;
+ color: #333;
+ line-height: 1.6;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ margin: 0;
+  }
+  
+.form-wrapper {
+ width: 600px; /* サイズを大きくする */
+ margin: 0 auto;
+ padding: 30px; /* パディングを増やす */
+  }
+  
+  
+.contact-form {
+ display: flex;
+ flex-direction: column;
+  }
+
+
+.form-group {
+ margin-bottom: 20px; /* 余白を増やす */
+ margin-right: 30px;
+  }
+  
+
+.form-group label {
+ font-size: 15px; /* フォントサイズを大きくする */
+ display: block;
+ margin-bottom: 8px;
+ text-align: center;
+  }
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+ width: 100%;
+ padding: 15px; /* パディングを増やす */
+ border: 1px solid #ddd;
+ border-radius: 5px;
+ font-size: 1em; /* フォントサイズを大きくする */
+  }
+
+
+.action-btns {
+ display: flex;
+ flex-direction: column;
+  }
+
+
+.button {
+ padding: 12px 25px; /* ボタンのサイズを大きくする */
+ border: none;
+ border-radius: 5px;
+ background-color: navy;
+ color: #fff;
+ cursor: pointer;
+ margin-bottom: 12px; /* 余白を増やす */
+  }
+
+.button:hover {
+ background-color: #555;
+  }
+
+.submit_end {
+ text-align: center;
+}
+
+@keyframes slideDown {
+from {
+ opacity: 0; 
+ transform: translateY(-200px);
+  }
+  
+  }
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* form-wrapperにアニメーションを適用 */
+.form-wrapper {
+/* ...（既存のスタイル）... */
+  animation: slideDown 1.5s ease-out;
+}

@@ -1,0 +1,43 @@
+
+
+        /* Styling for buttons */
+        .btn-top-mypage1 {
+            position: absolute;
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-left: 675px;
+            margin-top: 250px;
+            font-size: 15px;
+        }
+
+        .btn-top-mypage2 {
+            position: absolute;
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-left: 640px;
+            margin-top: 320px;
+            font-size: 15px;
+        }
+
+        .btn-current-info {
+            position: absolute;
+            background-color: navy;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-left: 645px;
+            margin-top: 390px;
+            font-size: 15px;
+        }
+
+        /* Additional styling for hover effect */
+        .btn-top-mypage:hover, .btn-current-info:hover {
+            opacity: 0.8;
+        }

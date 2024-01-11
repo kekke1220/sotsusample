@@ -1,0 +1,171 @@
+#topname {
+  position: absolute;
+  font-size: 100px;
+  font-weight: bold;
+  color: black;
+  bottom: 580px;
+  left: 100px;
+  font-family: Times;
+}
+
+#topsub {
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  bottom: 550px;
+  left: 100px;
+  font-family: Times;
+}
+
+
+/* 右から左へのスライドアニメーション */
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(30vw);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* 左から右へのスライドアニメーション */
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-30vw);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* アニメーションクラス */
+.slide-in-right {
+  animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+}
+
+.slide-in-left {
+  animation: 1.5s ease-out 0s 1 slideInFromLeft forwards;
+}
+
+.title1 {
+  position: absolute;
+  color: black;
+  font-size: 60px;
+  font-weight: bold;
+  bottom: 240px;
+  left: 940px;
+}
+
+.title2 {
+  position: absolute;
+  color: black;
+  font-size: 60px;
+  font-weight: bold;
+  bottom: 170px;
+  left: 702px;
+}
+
+img {
+  opacity: 70%;
+}
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+/* fontawesome */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* Simple Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+/* Form Layout */
+.form-wrapper {
+  opacity: 80%;
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+ 
+  margin: 3em auto;
+  padding: 0 1em;
+  width: 370px;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+form {
+  padding: 0 1.5em;
+}
+
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+.form-item input {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-item input:focus {
+  border-bottom: 2px solid #f16272;
+  outline: none;
+}
+
+.button-panel {
+  margin: 2em 0 0;
+  width: 100%;
+}
+
+.button-panel .button {
+  background: #f16272;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.button:hover {
+  background: #ee3e52;
+}
+
+.form-footer {
+  font-size: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.form-footer a {
+  color: black;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+.form-footer a:hover {
+  border-bottom: 1px dotted black;
+}
