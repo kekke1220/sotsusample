@@ -41,7 +41,7 @@
   <div class="form-footer">
     <p><a href="sign_up.php">新規登録はこちら</a></p>
     <p><a href="#">パスワードお忘れの方</a></p>
-    <p><a href="compa-regi.php">雇用側の企業様の登録はこちら</a></p>
+    <p><a href="compa-regi.php">雇用主様の登録はこちら</a></p>
   </div>
 </div>
 
