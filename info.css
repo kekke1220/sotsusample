@@ -353,4 +353,9 @@
      .credit a:hover {
         text-decoration: underline;
      }
+
+     #view_today {
+      color: black;
+      font-weight: bold;
+    }
     

@@ -354,3 +354,8 @@
   #slideshow img:first-child {
     opacity: 1;
   } */
+
+  #view_today {
+    color: black;
+    font-weight: bold;
+  }

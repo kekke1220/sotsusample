@@ -1,6 +1,6 @@
 .top-top {
    display: flex;
-   margin-left: 540px;
+   margin-left: 530px;
    margin-top: 140px;
 }
 
@@ -354,3 +354,8 @@ body {
  #slideshow img:first-child {
    opacity: 1;
  } */
+
+ #view_today {
+   color: black;
+   font-weight: bold;
+ }
