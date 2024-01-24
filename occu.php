@@ -40,20 +40,6 @@ loginCheck();
    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> PHN</a>
 </nav>
 
-<!-- <script>
-  const slideshow = document.getElementById('slideshow');
-  const images = slideshow.getElementsByTagName('img');
-  let currentIndex = 0;
-
-  function changeImage() {
-    images[currentIndex].style.opacity = 0;
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.opacity = 1;
-  }
-
-  setInterval(changeImage, 3000);
-</script> -->
-
 <span id="view_today"></span>
 
 
