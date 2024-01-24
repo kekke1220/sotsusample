@@ -116,7 +116,7 @@ form {
 .form-item input {
   background: rgba(0, 0, 0, 0);
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   color: black;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
@@ -126,7 +126,7 @@ form {
 }
 
 .form-item input:focus {
-  border-bottom: 2px solid #f16272;
+  border-bottom: 1px solid #f16272;
   outline: none;
 }
 

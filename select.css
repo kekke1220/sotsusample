@@ -336,26 +336,3 @@ body {
    color: black;
    font-weight: bold;
  }
-
-
-
- /* #slideshow {
-   opacity: 20%;
-   position: relative;
-   width: 600px;
-   height: 400px;
-   overflow: hidden;
-   left: 415px;
-   top: 180px;
- }
- #slideshow img {
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-   transition: opacity 1s;
-   box-shadow: inset 0 0 10px 15px white;
- }
- #slideshow img:first-child {
-   opacity: 1;
- } */

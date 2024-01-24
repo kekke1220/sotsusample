@@ -21,15 +21,6 @@ loginCheck();
 <div id="sub">トップページ</div>
 </div>
 
-<!-- <div id="slideshow">
-    <img src="3485503_s.jpg" alt="画像1">
-    <img src="27646413_s.jpg" alt="画像2">
-    <img src="28129454_s.jpg" alt="画像3">
-    <img src="28190952_s.jpg" alt="画像4">
-    <img src="28420016_s.jpg" alt="画像5">
-    <img src="28429021_s.jpg" alt="画像6">
-  </div> -->
-
     <nav class="menu">
    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
    <label class="menu-open-button" for="menu-open">
@@ -45,20 +36,6 @@ loginCheck();
    <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
    <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
 </nav>
-
-<!-- <script>
-  const slideshow = document.getElementById('slideshow');
-  const images = slideshow.getElementsByTagName('img');
-  let currentIndex = 0;
-
-  function changeImage() {
-    images[currentIndex].style.opacity = 0;
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.opacity = 1;
-  }
-
-  setInterval(changeImage, 3000);
-</script> -->
 
 <span id="view_today"></span>
 
