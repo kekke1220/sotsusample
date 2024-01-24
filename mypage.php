@@ -16,6 +16,8 @@ loginCheck();
 </head>
 <body>
 
+<div class="context">
+
 <div class="top-top">
 <div id="top">medi-side</div>
 <div id="sub">マイページ</div>
@@ -49,6 +51,24 @@ loginCheck();
 </nav>
 
 <span id="view_today"></span>
+
+</div>
+
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
 
 <script type="text/javascript">
 document.getElementById("view_today").innerHTML = getToday();
