@@ -41,9 +41,9 @@ loginCheck();
   </label>
 
    <a href="select.php" class="menu-item blue"> <i class="fa fa-anchor"></i>トップページ</a>
-   <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> お気に入り求人</a>
-   <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> 応募一覧</a>
-   <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i>マッチング歴</a>
+   <a href="favorite.php" class="menu-item green"> <i class="fa fa-coffee"></i> お気に入り求人</a>
+   <a href="apply.php" class="menu-item red"> <i class="fa fa-heart"></i> 応募一覧</a>
+   <a href="match.php" class="menu-item purple"> <i class="fa fa-microphone"></i>マッチング歴</a>
    <a href="info.php" class="menu-item orange"> <i class="fa fa-star"></i> 情報登録・変更</a>
    <a href="contactform.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> お問い合わせ</a>
 </nav>
