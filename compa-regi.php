@@ -10,7 +10,7 @@
 
 <div class="form-wrapper">
 
-  <h1>雇用主専用 新規登録</h1>
+  <h1>雇用主様専用 新規登録</h1>
 
   <form name="form1" action="" method="post">
 

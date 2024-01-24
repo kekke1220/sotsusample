@@ -10,18 +10,18 @@
 
 <div class="form-wrapper">
 
-  <h1>Sign Up</h1>
+  <h1>被雇用者様専用 新規登録</h1>
 
   <form name="form1" action="insert2.php" method="post">
 
     <div class="form-item">
       <label for="name"></label>
-      <input type="text" name="name" required="required" placeholder="Name"></input>
+      <input type="text" name="name" required="required" placeholder="氏名"></input>
     </div>
 
     <div class="form-item">
       <label for="email"></label>
-      <input type="email" name="email" required="required" placeholder="Email Address"></input>
+      <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
     </div>
 
     <div class="form-item">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="button-panel">
-      <input type="submit" class="button" title="Sign In" value="Sign Up"></input>
+      <input type="submit" class="button" title="Sign In" value="新規登録"></input>
     </div>
 
   </form>
