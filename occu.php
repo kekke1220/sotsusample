@@ -11,14 +11,14 @@ loginCheck();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="occu.css">
     <title>Document</title>
 </head>
 <body>
 
 <div class="top-top">
 <div id="top">medi-side</div>
-<div id="sub">トップページ</div>
+<div id="sub">職種で探す</div>
 </div>
 
 <!-- <div id="slideshow">
@@ -38,12 +38,12 @@ loginCheck();
     <span class="lines line-3"></span>
   </label>
 
-   <a href="mypage.php" class="menu-item blue"> <i class="fa fa-anchor"></i> マイページ</a>
-   <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
-   <a href="occu.php" class="menu-item red"> <i class="fa fa-heart"></i> 職種検索</a>
-   <a href="freeword.php" class="menu-item purple"> <i class="fa fa-microphone"></i> フリーワード検索</a>
-   <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
-   <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
+   <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> Dr</a>
+   <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> Ns</a>
+   <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> PT</a>
+   <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> OT</a>
+   <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> ST</a>
+   <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> PHN</a>
 </nav>
 
 <!-- <script>
