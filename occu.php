@@ -16,19 +16,13 @@ loginCheck();
 </head>
 <body>
 
+<div class="context">
+
+
 <div class="top-top">
 <div id="top">medi-side</div>
 <div id="sub">職種で探す</div>
 </div>
-
-<!-- <div id="slideshow">
-    <img src="3485503_s.jpg" alt="画像1">
-    <img src="27646413_s.jpg" alt="画像2">
-    <img src="28129454_s.jpg" alt="画像3">
-    <img src="28190952_s.jpg" alt="画像4">
-    <img src="28420016_s.jpg" alt="画像5">
-    <img src="28429021_s.jpg" alt="画像6">
-  </div> -->
 
     <nav class="menu">
    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
@@ -62,6 +56,25 @@ loginCheck();
 
 <span id="view_today"></span>
 
+
+</div>
+
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+
 <script type="text/javascript">
 document.getElementById("view_today").innerHTML = getToday();
 
@@ -78,6 +91,7 @@ function getToday() {
 	var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ")";
 	return s;
 }
+
 </script>
 
 

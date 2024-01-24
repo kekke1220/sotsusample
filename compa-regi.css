@@ -12,9 +12,9 @@
 
 /* body */
 body {
-  background: white;
   color: black;
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+
 }
 
 /* Form Layout */
@@ -22,7 +22,6 @@ body {
   position: absolute;
   bottom: 150px;
   left: 390px;
-  background: white;
   margin: 3em auto;
   padding: 50px;
   width: 700px;
