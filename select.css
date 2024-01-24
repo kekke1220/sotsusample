@@ -332,6 +332,11 @@ body {
     text-decoration: underline;
  }
 
+ #view_today {
+   color: black;
+   font-weight: bold;
+ }
+
 
 
  /* #slideshow {
@@ -354,8 +359,3 @@ body {
  #slideshow img:first-child {
    opacity: 1;
  } */
-
- #view_today {
-   color: black;
-   font-weight: bold;
- }
