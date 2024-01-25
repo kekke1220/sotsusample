@@ -15,7 +15,7 @@ loginCheck();
     <title>Document</title>
 </head>
 <body>
-
+    
 <div class="top-top">
 <div id="top">medi-side</div>
 <div id="sub">フリーワードで求人を探す</div>
@@ -25,7 +25,7 @@ loginCheck();
     <label>
         <input type="text" aria-label="キーワードを入力">
     </label>
-</form>
+</form>>
     
 </body>
 </html>
