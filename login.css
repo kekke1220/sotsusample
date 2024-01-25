@@ -10,7 +10,7 @@
 
 #topsub {
   position: absolute;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   color: black;
   bottom: 550px;
@@ -71,7 +71,7 @@
 }
 
 img {
-  opacity: 70%;
+  opacity: 80%;
 }
 
 /* Fonts */
