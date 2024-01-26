@@ -25,7 +25,7 @@ loginCheck();
     <label>
         <input type="text" aria-label="キーワードを入力">
     </label>
-</form>>
+</form>
     
 </body>
 </html>
