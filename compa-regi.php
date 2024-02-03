@@ -12,7 +12,7 @@
 
   <h1>雇用主様専用 新規登録</h1>
 
-  <form name="form1" action="" method="post">
+  <form name="form1" action="sign_up_end.php" method="post">
 
     <div class="form-item">
       <label for="name"></label>

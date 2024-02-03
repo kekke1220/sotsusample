@@ -53,16 +53,8 @@ if ($status == false) {
                     <input type="text" id="email" name="email" value="<?= h($row['email']) ?>">
                 </div>
                 <div>
-                    <label for="adress">住所</label>
+                    <label for="adress">所在地</label>
                     <input type="text" id="adress" name="adress" value="<?= h($row['adress']) ?>">
-                </div>
-                <div>
-                    <label for="age">年齢</label>
-                    <input type="text" id="age" name="age" value="<?= h($row['age']) ?>">
-                </div>
-                <div>
-                    <label for="job">職種</label>
-                    <input type="text" id="age" name="job" value="<?= h($row['job']) ?>">
                 </div>
             </div>
 

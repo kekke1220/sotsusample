@@ -26,16 +26,8 @@
                     <input type="text" id="email" name="email">
                 </div>
                 <div>
-                    <label for="adress">住所</label>
+                    <label for="adress">所在地</label>
                     <input type="text" id="adress" name="adress">
-                </div>
-                <div>
-                    <label for="age">年齢</label>
-                    <input type="text" id="age" name="age">
-                </div>
-                <div>
-                    <label for="job">職種</label>
-                    <input type="text" id="job" name="job">
                 </div>
                 <div>
                     <label for="image">顔写真</label>
