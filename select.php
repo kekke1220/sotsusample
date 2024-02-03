@@ -12,6 +12,7 @@ loginCheck();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="select.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -31,10 +32,7 @@ loginCheck();
     <span class="lines line-3"></span>
   </label>
 
-   <a href="mypage.php" class="menu-item blue"> <i class="fa fa-anchor"></i> マイページ</a>
    <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
-   <a href="occu.php" class="menu-item red"> <i class="fa fa-heart"></i> 職種検索</a>
-   <a href="freeword.php" class="menu-item purple"> <i class="fa fa-microphone"></i> フリーワード検索</a>
    <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
    <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
 </nav>
