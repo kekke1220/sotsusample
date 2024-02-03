@@ -9,7 +9,7 @@
 <body>
     
     <div class="txt1">ご登録が完了致しました。</div>
-    <div class="txt2">新しい道を切り拓こう。</div>
+    <div class="txt2">マップにピンが表示されました。</div>
     <a href="login.php">ログイン</a>
 
 </body>

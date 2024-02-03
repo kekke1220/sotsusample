@@ -14,10 +14,12 @@
 
 <img src="24281324_m.jpg" alt="トップ画像" width="100%" height="830px">
 <div id="topname">medi-side</div>
-<div id="topsub">医療者と医療関連ジョブの副業マッチングサイト</div>
+<div id="topsub">医療者と医療機関の副業マッチングサイト</div>
 
 <div class="title1">納得の日々を。</div><br>
-<div class="title2">新しい道を切り拓こう。</div>
+<div class="title2">多くの笑顔をここから。</div>
+
+<a href="select.php" class="btn btn--circle"><br>副業検索は<br>こちらから<i class="fas fa-angle-down fa-position-bottom"></i></a>
 
 <div class="form-wrapper">
 
@@ -34,18 +36,19 @@
     </div>
 
     <div class="button-panel">
-      <input type="submit" class="button" title="Sign In" value="ログイン"></input>
+      <input type="submit" class="button" title="Sign In" value="雇用機関様ログイン"></input>
     </div>
 
   </form>
   <div class="form-footer">
-    <p><a href="compa-regi.php">雇用主様の登録はこちら</a></p>
-    <p><a href="#">パスワードお忘れの雇用主様</a></p>
+    <p><a href="compa-regi.php">雇用機関様の新規登録はこちら</a></p>
+    <p><a href="#">パスワードお忘れの場合</a></p>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', (event) => {
+
+    document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('topname').classList.add('slide-in-right');
     document.getElementById('topsub').classList.add('slide-in-right');
     document.querySelector('.title1').classList.add('slide-in-left');

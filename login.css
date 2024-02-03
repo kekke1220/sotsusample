@@ -1,20 +1,20 @@
 #topname {
   position: absolute;
-  font-size: 100px;
+  font-size: 180px;
   font-weight: bold;
   color: black;
-  bottom: 580px;
+  bottom: 570px;
   left: 100px;
   font-family: Times;
 }
 
 #topsub {
   position: absolute;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: bold;
   color: black;
   bottom: 550px;
-  left: 100px;
+  left: 110px;
   font-family: Times;
 }
 
@@ -57,10 +57,8 @@
   color: black;
   font-size: 60px;
   font-weight: bold;
-  bottom: 240px;
-  left: 940px;
-  color       : #000000;            /* 文字の色 */
-  text-shadow : 2px 3px #999999;  /* 文字の影 */
+  bottom: 190px;
+  left: 960px;
 }
 
 .title2 {
@@ -68,14 +66,12 @@
   color: black;
   font-size: 60px;
   font-weight: bold;
-  bottom: 170px;
-  left: 702px;
-  color       : #000000;            /* 文字の色 */
-  text-shadow : 2px 3px #999999;  /* 文字の影 */
+  bottom: 100px;
+  left: 722px;
 }
 
 img {
-  opacity: 80%;
+  opacity: 70%;
 }
 
 /* Fonts */
@@ -95,9 +91,9 @@ img {
 .form-wrapper {
   opacity: 80%;
   position: absolute;
-  bottom: 20px;
-  left: 100px;
- 
+  bottom: 1px;
+  top: 480px;
+  left: 80px;
   margin: 3em auto;
   padding: 0 1em;
   width: 370px;
@@ -123,7 +119,7 @@ form {
   border-bottom: 1px solid black;
   color: black;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 15px;
   height: 50px;
   transition: border-color 0.3s;
   width: 100%;
@@ -135,6 +131,7 @@ form {
 }
 
 .button-panel {
+  font-size: 12px;
   margin: 2em 0 0;
   width: 100%;
 }
@@ -159,7 +156,7 @@ form {
 }
 
 .form-footer {
-  font-size: 1em;
+  font-size: 15px;
   padding: 2em 0;
   text-align: center;
 }
@@ -172,4 +169,76 @@ form {
 
 .form-footer a:hover {
   border-bottom: 1px dotted black;
+}
+
+
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  position: absolute;
+  bottom: 500px;
+  left: 200px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  opacity: 80%;
+}
+
+a.btn--circle {
+  width: 140px;
+  height: 140px;
+  padding: 20px 0 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #eb6877;
+  -webkit-box-shadow: 0 7px 0 #e53b4e;
+  box-shadow: 0 7px 0 #e53b4e;
+}
+
+a.btn--circle i {
+  font-size: 150%;
+}
+
+.fa-position-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 0.5rem);
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+  color: #fff;
+  -webkit-box-shadow: 0 3px 0 #e53b4e;
+  box-shadow: 0 3px 0 #e53b4e;
 }

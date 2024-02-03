@@ -30,7 +30,7 @@ $val = $stmt->fetch();
 if( $val['id'] != ''){
     //Login成功時 該当レコードがあればSESSIONに値を代入
 $_SESSION['chk_ssid'] = session_id();
-header('Location: select.php');
+header('Location: compa_mypage.php');
 
 }else{
     //Login失敗時(Logout経由)
