@@ -14,7 +14,7 @@
 
 <div class="top-top">
   <div id="top">medi-side</div>
-  <div id="sub">トップページ</div>
+  <div id="sub">ホーム</div>
 </div>
 
   <nav class="menu">
@@ -26,9 +26,9 @@
       <span class="lines line-3"></span>
     </label>
 
-    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i>medi-sideとは</a> 
+    <a href="medi_side.php" class="menu-item green"> <i class="fa fa-coffee"></i>medi-sideとは</a> 
     <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
-    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i>応募用PDF作成</a>
+    <a href="pdf_made.php" class="menu-item green"> <i class="fa fa-coffee"></i>応募用PDF作成</a>
     <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
   
 
