@@ -12,8 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            margin: 70px;
             background-color: white;
         }
         
@@ -64,6 +63,7 @@
             cursor: pointer;
             margin-bottom: 12px;
             width: 103%;
+            font-size: 15px;
         }
         
         .action-btns input[type="submit"]:hover {
@@ -139,7 +139,7 @@
             </div> -->
 
             <div class="action-btns">
-                <input type="submit" value="PDF作成　※保存すると次回の応募がスムーズ！">
+                <input type="submit" value="PDF作成 【保存推奨】※次回応募がスムーズです。">
             </div>
         </form>
     </div>
