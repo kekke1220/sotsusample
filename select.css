@@ -1,10 +1,10 @@
 .top-top {
    display: flex;
-   margin-left: 220px;
+   margin-left: 170px;
 }
 
 #top {
-   font-size: 60px;
+   font-size: 80px;
    font-weight: bold;
    font-family: Times;
    color: black;
@@ -13,7 +13,7 @@
 #sub {
    font-size: 20px;
    font-weight: bold;
-   margin-top: 32px;
+   margin-top: 50px;
    margin-left: 10px;
    color: black;
 }
@@ -334,7 +334,7 @@ body {
  #view_today {
    color: black;
    font-weight: bold;
-   margin-right: 830px
+   margin-right: 930px;
  }
 
 
