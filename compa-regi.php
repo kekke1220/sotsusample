@@ -34,11 +34,6 @@
       <input type="text" name="lpw" required="required" placeholder="Password"></input>
     </div>
 
-    <div class="form-item">
-      <label for="pdf"></label>
-      <input type="file" name="file" required="required" placeholder="求人票"></input>
-    </div>
-
     <div class="button-panel">
       <input type="submit" class="button" title="Sign In" value="登録"></input>
     </div>
