@@ -27,14 +27,16 @@ if($status === false){
 $val = $stmt->fetch();
 
 //if(password_verify($lpw, $val['lpw'])){ //* PasswordがHash化の場合はこっちのIFを使う
-if( $val['id'] != ''){
-    //Login成功時 該当レコードがあればSESSIONに値を代入
-$_SESSION['chk_ssid'] = session_id();
-header('Location: compa_mypage.php');
-
-}else{
-    //Login失敗時(Logout経由)
-    header('Location: login.php');
-}
+    if( $val['id'] != ''){
+        //Login成功時 該当レコードがあればSESSIONに値を代入
+        $_SESSION['chk_ssid'] = session_id();
+        // 新たにログインしたユーザーのマイページにリダイレクト
+        header('Location: http://localhost/sotsusample/compa_mypage.php?id=' . $val['id']);
+        exit(); // リダイレクトしたらスクリプトの実行を終了する
+    } else {
+        //Login失敗時(Logout経由)
+        header('Location: login.php');
+        exit(); // リダイレクトしたらスクリプトの実行を終了する
+    }
 
 exit();
