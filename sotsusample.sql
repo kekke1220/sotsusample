@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2024 年 1 月 11 日 08:00
+-- 生成日時: 2024 年 2 月 27 日 05:00
 -- サーバのバージョン： 10.4.28-MariaDB
 -- PHP のバージョン: 8.2.4
 
@@ -32,19 +32,20 @@ CREATE TABLE `sotsusample` (
   `name` varchar(64) NOT NULL,
   `email` varchar(128) NOT NULL,
   `lid` varchar(128) NOT NULL,
-  `lpw` varchar(128) NOT NULL
+  `lpw` varchar(128) NOT NULL,
+  `mypage_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- テーブルのデータのダンプ `sotsusample`
 --
 
-INSERT INTO `sotsusample` (`id`, `name`, `email`, `lid`, `lpw`) VALUES
-(2, 'a', 'a@aaaa', 'test2', 'test2'),
-(3, 'y', 'y@aaa', 'test5', 'test5'),
-(4, 'q', 'q@q', 'test3', 'test3'),
-(5, 'y', 'y@y', 'test6', 'test6'),
-(6, 'u', 'u@u', 'test7', 'test7');
+INSERT INTO `sotsusample` (`id`, `name`, `email`, `lid`, `lpw`, `mypage_url`) VALUES
+(2, 'a', 'a@aaaa', 'test2', 'test2', ''),
+(3, 'y', 'y@aaa', 'test5', 'test5', ''),
+(4, 'q', 'q@q', 'test3', 'test3', ''),
+(5, 'y', 'y@y', 'test6', 'test6', ''),
+(6, 'u', 'u@u', 'test7', 'test7', '');
 
 --
 -- ダンプしたテーブルのインデックス
