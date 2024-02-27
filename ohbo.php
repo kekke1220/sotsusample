@@ -84,51 +84,16 @@
 </head>
 <body>
     <div class="form-wrapper">
-        <form action="generate_pdf.php" method="post" class="contact-form">
-            <h1 class="form-title">応募用PDF作成フォーム</h1>
+        <form action="#" method="post" class="contact-form">
+            <h1 class="form-title">応募フォーム</h1>
 
             <div class="form-group">
-                <label for="name">名前</label>
-                <input type="text" id="name" name="name" required>
+                <label for="pdf">個人情報PDF</label>
+                <input type="file" id="pdf" name="pdf" required>
             </div>
 
             <div class="form-group">
-                <label for="age">年齢</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">住所</label>
-                <input type="text" id="address" name="address" required>
-            </div>
-
-            <div class="form-group">
-                <label for="tel">電話番号</label>
-                <input type="tel" id="tel" name="tel" required>
-            </div>
-
-            <div class="form-group">
-                <label for="sex">性別</label>
-                <select id="sex" name="sex" required>
-                    <option value="">選択</option>
-                    <option value="Male">男性</option>
-                    <option value="Female">女性</option>
-                    <option value="Other">未選択</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="mail">メールアドレス</label>
-                <input type="email" id="mail" name="mail" required>
-            </div>
-
-            <div class="form-group">
-                <label for="occupation">職種</label>
-                <input type="text" id="occupation" name="occupation" required>
-            </div>
-
-            <div class="form-group">
-                <label for="motivation">共有事項</label>
+                <label for="motivation">志望動機</label>
                 <textarea id="motivation" name="motivation" required></textarea>
             </div>
 
@@ -139,10 +104,9 @@
             </div> -->
 
             <div class="action-btns">
-                <input type="submit" value="PDF作成 【保存推奨】※次回応募がスムーズです。">
+                <input type="submit" value="応募する">
             </div>
         </form>
     </div>
 </body>
 </html>
-

@@ -1,53 +1,85 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Map:Circle</title>
-    <style>html,body{height:100%;}body{padding:0;margin:0;}h1{padding:0;margin:0;font-size:50%;}</style>
+    <title>Infobox:showPointer&actions</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="map.css">
 </head>
 <body>
 
-
-<!-- MAP[START] -->
-<div id="myMap" style='width:100%;height:100%;float:left;'></div>
-<!-- MAP[END] -->
-
+<div id="myMap" style='position:relative;width:100%;height:800px;'></div>
 
 <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=' async defer></script>
-<script src="BmapQuery.js"></script>
 <script>
-    //****************************************************************************************
-    // BingMaps&BmapQuery
-    //****************************************************************************************
-    //Init
-    function GetMap(){
-        //------------------------------------------------------------------------
-        //1. Instance
-        //------------------------------------------------------------------------
-        const map = new Bmap("#myMap");
+<?php
+// データベース接続
+try {
+    $pdo = new PDO('mysql:dbname=sotsu_map;charset=utf8;host=localhost','root','');
+} catch (PDOException $e) {
+    exit('DBConnectError:'.$e->getMessage());
+}
 
-        //------------------------------------------------------------------------
-        //2. Display Map
-        //   startMap(lat, lon, "MapType", Zoom[1~20]);
-        //   MapType:[load, aerial,canvasDark,canvasLight,birdseye,grayscale,streetside]
-        //--------------------------------------------------
-        map.startMap(35.680944, 139.767275, "load", 14);
+// データ取得SQL作成
+$stmt = $pdo->prepare("SELECT * FROM sotsu_map");
+$status = $stmt->execute();
 
-        //------------------------------------------------------------------------
-        //3.Circle Add
-        //  circleSet( Meter, style={pinColor,fillColor,strokeWidth} );
-        //------------------------------------------------------------------------
-        //Blue
-        const style1 = {
-            pinColor:"#FF0000",
-            fillColor:"rgba(0,0,100,0.3)",
-            strokeWidth:1
-        };
-        map.circle(1000, style1); //1000m=1km
-        map.circle(2000, style1); //2000m=2Km
-        map.circle(3000, style1); //3000m=3km
-
+// データをJavaScriptで使用できる形式に変換
+$locations = [];
+if ($status==false) {
+    // エラーハンドリング
+    $error = $stmt->errorInfo();
+    exit("ErrorQuery:".$error[2]);
+} else {
+    while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+        $locations[] = $result;
     }
+}
+
+// PHPの配列をJSON形式に変換
+echo "let locations = ".json_encode($locations).";";
+?>
+
+function GetMap() {
+    let map = new Microsoft.Maps.Map('#myMap', {
+        zoom: 14
+    });
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        let currentLat = position.coords.latitude;
+        let currentLon = position.coords.longitude;
+        let currentLocation = new Microsoft.Maps.Location(currentLat, currentLon);
+        map.setView({ center: currentLocation });
+
+        let userPin = new Microsoft.Maps.Pushpin(currentLocation, {
+            title: '現在地',
+            color: 'red'
+        });
+        map.entities.push(userPin);
+    });
+
+    locations.forEach(function(location) {
+        let loc = new Microsoft.Maps.Location(parseFloat(location.lat), parseFloat(location.lng));
+        let pin = new Microsoft.Maps.Pushpin(loc, {
+            title: location.name,
+            subTitle: location.adress
+        });
+        
+        // Infoboxを作成し、ピンに関連付ける
+        let infobox = new Microsoft.Maps.Infobox(loc, {
+            title: location.name,
+            description: '<a href="' + location.hp + '">HP</a><br><a href="' + location.kyujin_file + '" target="_blank">求人票</a><br><a href="ohbo.php">応募</a>',
+            showPointer: true,
+            showCloseButton: true,
+            
+        });
+        
+        // Infoboxを地図に関連付ける
+        infobox.setMap(map);
+
+        // ピンを地図に追加
+        map.entities.push(pin);
+    });
+}
 </script>
 </body>
 </html>
