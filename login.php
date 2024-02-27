@@ -42,7 +42,7 @@
   </form>
   <div class="form-footer">
     <p><a href="compa-regi.php">雇用機関様の新規登録はこちら</a></p>
-    <p><a href="#">パスワードお忘れの場合</a></p>
+    <p><a href="pass_change.php">パスワードお忘れの場合</a></p>
   </div>
 </div>
 
