@@ -32,7 +32,7 @@
 
     <div class="form-item">
       <label for="lpw"></label>
-      <input type="text" name="lpw" required="required" placeholder="Password"></input>
+      <input type="password" name="lpw" required="required" placeholder="Password"></input>
     </div>
 
     <div class="button-panel">

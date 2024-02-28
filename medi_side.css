@@ -1,125 +1,113 @@
 .all {
     max-width: 100%;
+    height: 200px;
 }
 
-.area{
-    background: lightsteelblue; 
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:855px;
-}
 
-.circles{
+/* 太陽の光を追加する要素のスタイル */
+.sun-ray-container {
+    position: relative;
+    overflow: hidden; /* 疑似要素がコンテナを超えないようにする */
+    height: 100vh; /* または必要に応じて調整 */
+    width: 100vw; /* または必要に応じて調整 */
+  }
+  
+  .sun-ray-container::before {
+    content: "";
     position: absolute;
+    right: 0; /* 右上から開始 */
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+    width: 200%; /* 充分に大きくして全体をカバー */
+    height: 200%; /* 充分に大きくして全体をカバー */
+    background: radial-gradient(circle, rgba(255,255,0,0.3) 0%, rgba(255,255,0,0) 70%);
+    /* 太陽の光の色と透明度を調整 */
+    transform: rotate(45deg); /* 光の角度を調整 */
+    transform-origin: top right; /* 回転の基点を設定 */
+  }
+  
 
-.circles li{
+
+
+
+
+h1 {
     position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+    top: 100px;
+    left:200px;
+    font-size: 50px;
 }
 
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
+h2 {
+    position: absolute;
+    top: 200px;
+    left: 220px;
+    font-size: 30px;
 }
 
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
+.text {
+    position: absolute;
+    top: 300px;
+    left: 280px;
+    font-size: 20px;
 }
 
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
+.howtouse {
+    position: absolute;
+    top: 550px;
+    left: 280px;
+    font-size: 20px;
 }
 
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
+.main {
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
+/* 最初は非表示にしておく */
+h1, h2, .text p, .howtouse p {
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-}
-
-
-
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
+/* 横からスライドインするアニメーション */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
-        border-radius: 50%;
     }
-
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* アニメーションの適用 */
+h1 {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+h2 {
+    animation: slideInFromLeft 1.5s ease-out forwards;
+}
+
+.text p, .howtouse p {
+    animation: slideInFromRight 2s ease-out forwards;
+}
+
+/* インディビジュアルディレイを設定 */
+.text p:nth-child(1) { animation-delay: 0.5s; }
+.text p:nth-child(2) { animation-delay: 1s; }
+.text p:nth-child(3) { animation-delay: 1.5s; }
+.howtouse p:nth-child(1) { animation-delay: 2s; }
+.howtouse p:nth-child(2) { animation-delay: 2.5s; }
