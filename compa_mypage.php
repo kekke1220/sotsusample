@@ -27,7 +27,7 @@
     <a href="medi_side.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>medi-sideとは</a>
      <a href="caution.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>注意事項</a>
      <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ確認</a>
-     <a href="compa_info.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>情報確認・変更</a>
+     <a href="compa_info.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>マップ登録</a>
      <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
      <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
 
