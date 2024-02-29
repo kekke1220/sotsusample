@@ -32,6 +32,7 @@
     <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
     <a href="pdf_top.php" class="menu-item green"> <i class="fa fa-coffee"></i>応募用PDF作成</a>
     <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
+    <a href="#" class="menu-item orange"> <i class="fa fa-star"></i></a>
 
   </nav>
 
