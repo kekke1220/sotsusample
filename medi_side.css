@@ -1,113 +1,94 @@
 .all {
     max-width: 100%;
-    height: 200px;
+    /* height: 200px; 不要なので削除します */
+    position: relative; /* コンテンツを前面に表示するための基点 */
+    z-index: 1; /* 背景より前面に表示 */
 }
 
-
-/* 太陽の光を追加する要素のスタイル */
 .sun-ray-container {
-    position: relative;
-    overflow: hidden; /* 疑似要素がコンテナを超えないようにする */
-    height: 100vh; /* または必要に応じて調整 */
-    width: 100vw; /* または必要に応じて調整 */
-  }
-  
-  .sun-ray-container::before {
+    position: fixed; /* 背景を画面全体に固定 */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1; /* 背景を後ろに配置 */
+}
+
+.sun-ray-container::before {
     content: "";
     position: absolute;
-    right: 0; /* 右上から開始 */
+    right: 0;
     top: 0;
-    width: 200%; /* 充分に大きくして全体をカバー */
-    height: 200%; /* 充分に大きくして全体をカバー */
+    width: 200%;
+    height: 200%;
     background: radial-gradient(circle, rgba(255,255,0,0.3) 0%, rgba(255,255,0,0) 70%);
-    /* 太陽の光の色と透明度を調整 */
-    transform: rotate(45deg); /* 光の角度を調整 */
-    transform-origin: top right; /* 回転の基点を設定 */
-  }
-  
-
-
-
-
+    transform: rotate(45deg);
+    transform-origin: top right;
+}
 
 h1 {
     position: absolute;
-    top: 100px;
-    left:200px;
+    top: 100px; /* 位置を調整 */
+    left: 200px; /* 位置を調整 */
     font-size: 50px;
+    opacity: 1; /* 常に表示 */
 }
 
 h2 {
     position: absolute;
-    top: 200px;
-    left: 220px;
+    top: 200px; /* 位置を調整 */
+    left: 220px; /* 位置を調整 */
     font-size: 30px;
+    opacity: 1; /* 常に表示 */
 }
 
-.text {
+.text, .howtouse {
     position: absolute;
-    top: 300px;
-    left: 280px;
+    top: 300px; /* .text の開始位置を調整 */
+    left: 280px; /* 位置を調整 */
     font-size: 20px;
+    opacity: 1; /* 常に表示 */
 }
 
 .howtouse {
-    position: absolute;
-    top: 550px;
-    left: 280px;
-    font-size: 20px;
+    top: 550px; /* .howtouse の開始位置を調整 */
 }
 
-.main {
-    font-size: 25px;
-    font-weight: bold;
-}
+/* アニメーションの定義は以前のままで良いため、ここでは省略します */
 
-/* 最初は非表示にしておく */
+
+/* 全てのテキスト要素の初期設定 */
 h1, h2, .text p, .howtouse p {
     opacity: 0;
-    transform: translateX(-100%);
 }
 
 /* 横からスライドインするアニメーション */
 @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
+/* じんわり浮かび上がるアニメーション */
+@keyframes fadeIn {
+    to {
         opacity: 1;
     }
 }
 
-/* アニメーションの適用 */
+/* アニメーション適用 */
 h1 {
-    animation: slideInFromLeft 1s ease-out forwards;
+    animation: slideInFromLeft 1s ease-out 0.5s forwards;
+    transform: translateX(-100%);
 }
 
 h2 {
-    animation: slideInFromLeft 1.5s ease-out forwards;
+    animation: slideInFromLeft 1s ease-out 1s forwards;
+    transform: translateX(-100%);
 }
 
 .text p, .howtouse p {
-    animation: slideInFromRight 2s ease-out forwards;
+    animation: fadeIn 2s ease-out 1.5s forwards;
 }
-
-/* インディビジュアルディレイを設定 */
-.text p:nth-child(1) { animation-delay: 0.5s; }
-.text p:nth-child(2) { animation-delay: 1s; }
-.text p:nth-child(3) { animation-delay: 1.5s; }
-.howtouse p:nth-child(1) { animation-delay: 2s; }
-.howtouse p:nth-child(2) { animation-delay: 2.5s; }
