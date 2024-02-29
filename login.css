@@ -1,6 +1,6 @@
 #topname {
   position: absolute;
-  font-size: 180px;
+  font-size: 130px;
   font-weight: bold;
   color: black;
   bottom: 570px;
@@ -10,7 +10,7 @@
 
 #topsub {
   position: absolute;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: bold;
   color: black;
   bottom: 550px;

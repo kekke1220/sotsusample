@@ -27,7 +27,7 @@
       <span class="lines line-3"></span>
     </label>
 
-    <a href="medi_side.php" class="menu-item green"> <i class="fa fa-coffee"></i>medi-sideとは</a> 
+    <a href="medi_side.php" class="menu-item green"> <i class="fa fa-coffee"></i>Mot-elとは</a> 
     <a href="caution.php" class="menu-item green"> <i class="fa fa-diamond"></i>利用規約</a>
     <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
     <a href="pdf_top.php" class="menu-item green"> <i class="fa fa-coffee"></i>応募用PDF作成</a>
