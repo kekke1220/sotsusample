@@ -11,7 +11,7 @@
 <div class="context">
 
 <div class="top-top">
-  <div id="top">medi-side</div>
+  <div id="top">Mot-el</div>
   <div id="sub">企業様専用ページ</div>
 </div>
 

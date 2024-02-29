@@ -13,12 +13,12 @@
 <div class="context">
 
 <div class="top-top">
-  <div id="top">medi-side</div>
+  <div id="top">Mot-el</div>
   <div id="sub">ホーム</div>
 </div>
 
   <nav class="menu">
-    
+
     <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
 
     <label class="menu-open-button" for="menu-open">

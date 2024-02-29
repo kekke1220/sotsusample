@@ -13,7 +13,7 @@
 
 
 <img src="24281324_m.jpg" alt="トップ画像" width="100%" height="830px">
-<div id="topname">medi-side</div>
+<div id="topname">Mot-el</div>
 <div id="topsub">医療者と医療関連ジョブの副業マッチングサイト</div>
 
 <div class="title1">納得の日々を。</div><br>
