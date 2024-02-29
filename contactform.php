@@ -1,4 +1,6 @@
 <?php
+  // セッションを開始
+  session_start();
 
   $mode = "input";
   if( isset($_POST["back"] ) && $_POST["back"] ){
@@ -10,19 +12,29 @@
     $mode = "confirm";
   } else if( isset($_POST["send"] ) && $_POST["send"] ){
     // 送信ボタンを押下
+    $to = "koukeishou12@gmail.com"; // 宛先のメールアドレスを指定
+    $subject = "お問い合わせありがとうございます"; // メールの題名
     $message = "お問い合わせを受け付けました\r\n"
              . "名前: " . $_SESSION["fullname"] . "\r\n"
              . "Eメール: " . $_SESSION["email"] . "\r\n"
              . "お問い合わせ内容:\r\n"
              . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION["message"] );
-    mail($_SESSION["email"], "お問い合わせありがとうございます", $message );
-    mail("hoge@fuga.com", "お問い合わせありがとうございます", $message );
+    $headers = "From: " . $_SESSION["email"]; // 送信元のメールアドレス
+
+    // 自分（送信者）にも確認メールを送る
+    mail($_SESSION["email"], "お問い合わせ内容の確認", $message, $headers);
+
+    // 管理者（受信者）にメールを送る
+    mail($to, $subject, $message, $headers);
     $_SESSION = array();
+    session_destroy(); // セッションを破棄
     $mode = "send";
   } else {
     $_SESSION = array();
   }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
