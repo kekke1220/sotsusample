@@ -13,8 +13,7 @@
   <!-- コンテンツ -->
 </div>
 
-<img src="28129454_s.jpg" alt="背景" class="img3" width="50%" height="400px">
-<img src="28420016_s.jpg" alt="背景" class="img4" width="40%" height="300px">
+<img src="25102633_l.jpg" alt="背景" class="img3" width="40%" height="300px">
 
 <h1>素晴らしい国家資格を「もっと」活かそう</h1>
 <h2>「もっと」収入を増やし、「もっと」経験を増やす。</h2>
@@ -26,7 +25,8 @@
  </div>
 
  <div class="howtouse">
-    <p>事前にホームからPDFを作成し、マップ上の求人に作成したPDFを添付して応募するだけ！</p>
+    <p>事前にホームからPDFを作成し、</p>
+    <p>マップ上の求人に作成したPDFを添付して応募するだけ！</p>
     <p>あとは双方のメールアドレスにてやりとり開始できる簡単操作です。</p>
  </div>
 

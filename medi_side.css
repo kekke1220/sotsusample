@@ -29,7 +29,7 @@
 
 h1 {
     position: absolute;
-    top: 60px; /* 位置を調整 */
+    top: 40px; /* 位置を調整 */
     left: 150px; /* 位置を調整 */
     font-size: 55px;
     opacity: 1; /* 常に表示 */
@@ -37,8 +37,8 @@ h1 {
 
 h2 {
     position: absolute;
-    top: 200px; /* 位置を調整 */
-    left: 220px; /* 位置を調整 */
+    top: 180px; /* 位置を調整 */
+    left: 150px; /* 位置を調整 */
     font-size: 30px;
     opacity: 1; /* 常に表示 */
 }
@@ -46,13 +46,13 @@ h2 {
 .text, .howtouse {
     position: absolute;
     top: 300px; /* .text の開始位置を調整 */
-    left: 280px; /* 位置を調整 */
-    font-size: 20px;
+    left: 180px; /* 位置を調整 */
+    font-size: 18px;
     opacity: 1; /* 常に表示 */
 }
 
 .howtouse {
-    top: 550px; /* .howtouse の開始位置を調整 */
+    top: 500px; /* .howtouse の開始位置を調整 */
 }
 
 /* アニメーションの定義は以前のままで良いため、ここでは省略します */
@@ -89,7 +89,7 @@ h2 {
     transform: translateX(-100%);
 }
 
-.text p, .howtouse p{
+.text p, .howtouse p, .img3 {
     animation: fadeIn 2s ease-out 1.5s forwards;
 }
 
@@ -105,14 +105,7 @@ h2 {
 
 .img3 {
     position: relative;
-    margin-top: 200px;
-    margin-left: 550px;
-    opacity: 10%;
-}
-
-.img4 {
-    position: absolute;
-    margin-top: 500px;
-    right: 700px;
+    margin-top: 450px;
+    margin-left: 700px;
     opacity: 10%;
 }
