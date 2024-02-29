@@ -18,6 +18,7 @@
 </div>
 
   <nav class="menu">
+    
     <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
 
     <label class="menu-open-button" for="menu-open">
@@ -27,10 +28,10 @@
     </label>
 
     <a href="medi_side.php" class="menu-item green"> <i class="fa fa-coffee"></i>medi-sideとは</a> 
+    <a href="caution.php" class="menu-item green"> <i class="fa fa-diamond"></i>利用規約</a>
     <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
     <a href="pdf_top.php" class="menu-item green"> <i class="fa fa-coffee"></i>応募用PDF作成</a>
     <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
-  
 
   </nav>
 
