@@ -29,9 +29,9 @@
 
 h1 {
     position: absolute;
-    top: 100px; /* 位置を調整 */
-    left: 200px; /* 位置を調整 */
-    font-size: 50px;
+    top: 60px; /* 位置を調整 */
+    left: 150px; /* 位置を調整 */
+    font-size: 55px;
     opacity: 1; /* 常に表示 */
 }
 
@@ -89,6 +89,30 @@ h2 {
     transform: translateX(-100%);
 }
 
-.text p, .howtouse p {
+.text p, .howtouse p{
     animation: fadeIn 2s ease-out 1.5s forwards;
+}
+
+.img1 {
+    margin-top: 100px;
+    margin-left: 230px;
+}
+
+.img2 {
+    margin-top: 100px;
+    margin-left: 230px;
+}
+
+.img3 {
+    position: relative;
+    margin-top: 200px;
+    margin-left: 550px;
+    opacity: 10%;
+}
+
+.img4 {
+    position: absolute;
+    margin-top: 500px;
+    right: 700px;
+    opacity: 10%;
 }
