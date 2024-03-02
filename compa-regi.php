@@ -15,22 +15,18 @@
   <form name="form1" action="sign_up_end.php" method="post">
 
     <div class="form-item">
-      <label for="name"></label>
       <input type="text" name="name" required="required" placeholder="企業名"></input>
     </div>
 
     <div class="form-item">
-      <label for="email"></label>
       <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
     </div>
 
     <div class="form-item">
-      <label for="lid"></label>
       <input type="text" name="lid" required="required" placeholder="ID"></input>
     </div>
 
     <div class="form-item">
-      <label for="lpw"></label>
       <input type="text" name="lpw" required="required" placeholder="Password"></input>
     </div>
 

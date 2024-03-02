@@ -26,12 +26,10 @@
   <form name="form1" action="login_act.php" method="post">
 
     <div class="form-item">
-      <label for="lid"></label>
       <input type="text" name="lid" required="required" placeholder="ID"></input>
     </div>
 
     <div class="form-item">
-      <label for="lpw"></label>
       <input type="password" name="lpw" required="required" placeholder="Password"></input>
     </div>
 
