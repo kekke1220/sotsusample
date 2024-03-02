@@ -58,27 +58,28 @@ function GetMap() {
     });
 
     locations.forEach(function(location) {
-        let loc = new Microsoft.Maps.Location(parseFloat(location.lat), parseFloat(location.lng));
-        let pin = new Microsoft.Maps.Pushpin(loc, {
-            title: location.name,
-            subTitle: location.adress
-        });
-        
-        // Infoboxを作成し、ピンに関連付ける
-        let infobox = new Microsoft.Maps.Infobox(loc, {
-            title: location.name,
-            description: '<a href="' + location.hp + '">HP</a><br><a href="' + location.kyujin_file + '" target="_blank">求人票</a><br><a href="ohbo.php">応募</a>',
-            showPointer: true,
-            showCloseButton: true,
-            
-        });
-        
-        // Infoboxを地図に関連付ける
-        infobox.setMap(map);
-
-        // ピンを地図に追加
-        map.entities.push(pin);
+    let loc = new Microsoft.Maps.Location(parseFloat(location.lat), parseFloat(location.lng));
+    let pin = new Microsoft.Maps.Pushpin(loc, {
+        title: location.name,
+        subTitle: location.adress
     });
+
+    // PDFファイルへのリンクをcompa_info.phpに設定。ここではlocation.idを渡す例を示します。
+    let description = `<a href="${location.hp}">HP</a><br>` +
+                      `<a href="sample.php?id=${location.ID}">求人票</a><br>` +
+                      `<a href="ohbo.php">応募</a>`;
+
+    let infobox = new Microsoft.Maps.Infobox(loc, {
+        title: location.name,
+        description: description,
+        showPointer: true,
+        showCloseButton: true
+    });
+
+    infobox.setMap(map);
+    map.entities.push(pin);
+});
+
 }
 </script>
 </body>

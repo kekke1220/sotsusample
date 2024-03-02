@@ -15,7 +15,7 @@
 
      <a href="map.php" class="cta_btn07">MAP</i></a>
 
-     <a href="select.#" class="cta_btn03">
+     <a href="#" class="cta_btn03">
        登録済医療機関一覧
      </a>
      
