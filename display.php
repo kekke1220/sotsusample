@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once('funcs3.php');
+require_once('funcs.php');
 loginCheck();
 
 //２．データ登録SQL作成
-$pdo = db_conn();
+$pdo = db_conn('sotsusample_mypage');
 $stmt = $pdo->prepare('SELECT * FROM sotsusample_mypage');
 $status = $stmt->execute();
 

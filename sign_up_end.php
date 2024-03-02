@@ -1,4 +1,5 @@
 <?php
+require_once('funcs.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt->bindParam(':lid', $lid, PDO::PARAM_STR);
-    $stmt->bindParam(':lpw', $lpw, PDO::PARAM_STR);
+    $stmt->bindParam(':lpw', pass_h($lpw), PDO::PARAM_STR);
 
     // データベースに挿入を実行し、成功したかどうかをチェックする
     try {

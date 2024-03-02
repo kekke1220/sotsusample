@@ -7,10 +7,10 @@ function h($str)
 }
 
 //DB接続
-function db_conn()
+function db_conn($db_name_sotsu)
 {
     try {
-        $db_name = 'sotsusample';    //データベース名
+        $db_name = $db_name_sotsu;    //データベース名
         $db_id   = 'root';      //アカウント名
         $db_pw   = '';      //パスワード：XAMPPはパスワード無しに修正してください。
         $db_host = 'localhost'; //DBホスト
@@ -49,4 +49,9 @@ if( !isset($_SESSION['chk_ssid']) ||  $_SESSION['chk_ssid'] !== session_id() ){
     $_SESSION['chk_ssid'] = session_id();
 }
 
+}
+
+// ハッシュ化
+function pass_h($pass){
+   return password_hash($pass, PASSWORD_DEFAULT);
 }

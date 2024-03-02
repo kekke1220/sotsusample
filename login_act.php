@@ -9,13 +9,12 @@ $lpw = $_POST['lpw'];
 
 //1.  DB接続します
 require_once('funcs.php');
-$pdo = db_conn();
+$pdo = db_conn('sotsusample');
 
 //2. データ登録SQL作成
 // gs_user_table1に、IDとWPがあるか確認する。
-$stmt = $pdo->prepare('SELECT * FROM sotsusample WHERE lid = :lid AND lpw = :lpw; ');
+$stmt = $pdo->prepare('SELECT * FROM sotsusample WHERE lid = :lid');
 $stmt->bindValue(':lid', $lid, PDO::PARAM_STR);
-$stmt->bindValue(':lpw', $lpw, PDO::PARAM_STR);
 $status = $stmt->execute();
 
 //3. SQL実行時にエラーがある場合STOP
@@ -27,9 +26,10 @@ if($status === false){
 $val = $stmt->fetch();
 
 //if(password_verify($lpw, $val['lpw'])){ //* PasswordがHash化の場合はこっちのIFを使う
-    if( $val['id'] != ''){
+    if( $val['id'] != '' && password_verify($lpw, $val['lpw'])){
         //Login成功時 該当レコードがあればSESSIONに値を代入
         $_SESSION['chk_ssid'] = session_id();
+        $_SESSION['name'] = $val['name'];
         // 新たにログインしたユーザーのマイページにリダイレクト
         header('Location: http://localhost/sotsusample/compa_mypage.php?id=' . $val['id']);
         exit(); // リダイレクトしたらスクリプトの実行を終了する

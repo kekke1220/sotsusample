@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once('funcs3.php');
+require_once('funcs.php');
 loginCheck();
 
 $id = $_GET['id']; //?id~**を受け取る
-$pdo = db_conn();
+$pdo = db_conn('sotsusample_mypage');
 
 //２．データ登録SQL作成
 $stmt = $pdo->prepare('SELECT * FROM sotsusample_mypage WHERE id=:id;');

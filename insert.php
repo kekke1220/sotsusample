@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once('funcs3.php');
+require_once('funcs.php');
 loginCheck();
 
 //1. POSTデータ取得
@@ -34,8 +34,8 @@ if (isset($_FILES['image'])) {
 }
 
 //2. DB接続します
-require_once('funcs3.php');
-$pdo = db_conn();
+require_once('funcs.php');
+$pdo = db_conn('sotsusample_mypage');
 
 //３．データ登録SQL作成
 $stmt = $pdo->prepare('INSERT INTO sotsusample_mypage(name, email, adress, age, job, image)VALUES(:name, :email, :adress, :age, :job, :image);');
