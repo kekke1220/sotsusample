@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2024 年 3 月 02 日 14:23
+-- 生成日時: 2024 年 3 月 02 日 23:57
 -- サーバのバージョン： 10.4.28-MariaDB
 -- PHP のバージョン: 8.2.4
 
@@ -32,7 +32,7 @@ CREATE TABLE `sotsu_map` (
   `name` text NOT NULL,
   `adress` text NOT NULL,
   `hp` varchar(128) NOT NULL,
-  `kyujin_file` blob NOT NULL,
+  `kyujin_file` varchar(255) NOT NULL,
   `lat` float NOT NULL,
   `lng` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -42,8 +42,9 @@ CREATE TABLE `sotsu_map` (
 --
 
 INSERT INTO `sotsu_map` (`ID`, `name`, `adress`, `hp`, `kyujin_file`, `lat`, `lng`) VALUES
-(11, '佐々木', '札幌市中央区西１８丁目', 'https://web.sapmed.ac.jp/', 0xe5808be4babae68385e5a0b12e706466, 43.0608, 141.348),
-(12, '札幌医大病院', '札幌市中央区西１８丁目', 'https://web.sapmed.ac.jp/', 0x6162632e706466, 43.0552, 141.341);
+(16, 'あいうえお', '書きくけこ', 'https://web.sapmed.ac.jp/', '/var/www/html/htdocs/uploads/', 43.0611, 141.345),
+(17, '札幌医大病院', '札幌市中央区西１８丁目', 'https://web.sapmed.ac.jp/', '/var/www/html/htdocs/uploads/', 43.0747, 141.35),
+(18, 'sasaki', 'efdverv', 'https://web.sapmed.ac.jp/', '/var/www/html/htdocs/uploads/', 43.0553, 141.35);
 
 --
 -- ダンプしたテーブルのインデックス
@@ -63,7 +64,7 @@ ALTER TABLE `sotsu_map`
 -- テーブルの AUTO_INCREMENT `sotsu_map`
 --
 ALTER TABLE `sotsu_map`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,21 +3,27 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if (isset($_GET['path'])) {
-    $path = urldecode($_GET['path']); // URLデコードされたパス
+// ファイル名がクエリパラメーターから渡されたか確認
+if (isset($_GET['file'])) {
+    // ファイル名をURLデコード
+    $fileName = urldecode($_GET['file']);
+    
+    // 受け取ったファイル名を表示
+    echo "受け取ったファイル名: " . htmlspecialchars($fileName, ENT_QUOTES, 'UTF-8') . "<br>";
 
-    // ここで絶対パスを設定してみる（例としてのパスです）
-    $absolutePath = "/var/www/html/htdocs/pdfs/" . $path;
-
-    echo "デバッグ情報：<br>絶対パス: " . htmlspecialchars($absolutePath, ENT_QUOTES, 'UTF-8') . "<br>";
-
-    if (file_exists($absolutePath)) {
+    // ファイルが存在するか確認
+    if (file_exists($fileName)) {
+        // PDFファイルをブラウザに表示
         header('Content-Type: application/pdf');
-        header('Content-Disposition: inline; filename="' . basename($absolutePath) . '"');
-        readfile($absolutePath);
+        header('Content-Disposition: inline; filename="' . basename($fileName) . '"');
+        readfile($fileName);
         exit;
     } else {
-        echo "指定されたPDFファイルが見つかりません。絶対パス: " . htmlspecialchars($absolutePath, ENT_QUOTES, 'UTF-8');
+        // ファイルが見つからない場合はエラーメッセージを表示
+        echo "指定されたPDFファイルが見つかりません。絶対パス: " . htmlspecialchars($fileName, ENT_QUOTES, 'UTF-8');
     }
+} else {
+    // ファイル名が指定されていない場合はエラーメッセージを表示
+    echo "ファイルが指定されていません。";
 }
 ?>
