@@ -83,7 +83,7 @@
 
 <body>
     <div class="form-wrapper">
-        <form class="contact-form" method="post" action="insert3.php">
+        <form class="contact-form" method="post" action="insert3.php" enctype="multipart/form-data">
             <h1>医療機関登録</h1>
 
             <div class="form-group">
