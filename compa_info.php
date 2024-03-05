@@ -110,10 +110,32 @@
                 <label for="hp">ホームページ</label>
                 <input type="text" id="hp" name="hp" required>
             </div>
+            
+            <div class="text">※下記より求人票作成に必要な情報です。</div><br>
 
             <div class="form-group">
-                <label for="kyujin_file">求人票</label>
-                <input type="file" id="kyujin_file" name="kyujin_file" required>
+                <label for="name">電話番号</label>
+                <input type="text" id="tell" name="tell" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">時給</label>
+                <input type="text" id="money" name="money" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">職務内容</label>
+                <input type="text" id="job" name="job" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">時間・期間</label>
+                <input type="text" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">特記事項</label>
+                <input type="text" id="etc" name="etc" required>
             </div>
 
             <div class="action-btns">
