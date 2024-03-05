@@ -69,7 +69,7 @@
 
      <a href="map.php" class="cta_btn07">MAP</i></a>
 
-     <a href="#" class="cta_btn03">
+     <a href="info_henkou.php" class="cta_btn03">
        登録済医療機関一覧
      </a>
      
