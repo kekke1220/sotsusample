@@ -84,7 +84,7 @@
 </head>
 <body>
     <div class="form-wrapper">
-        <form action="#" method="post" class="contact-form">
+        <form class="contact-form" method="post" action="insert4.php">
             <h1 class="form-title">応募フォーム</h1>
 
             <!-- <div class="form-group">
@@ -99,37 +99,32 @@
 
             <div class="form-group">
                 <label for="age">年齢(例：20代、30代　等)</label>
-                <input type="number" id="age" name="age" required>
+                <input type="text" id="age" name="age" required>
             </div>
 
             <div class="form-group">
-                <label for="address">住所(都道府県、⚪︎⚪︎市、××区まで)</label>
-                <input type="text" id="address" name="address" required>
+                <label for="adress">住所(都道府県、⚪︎⚪︎市、××区まで)</label>
+                <input type="text" id="adress" name="adress" required>
             </div>
 
             <div class="form-group">
-                <label for="tel">メールアドレス</label>
-                <input type="tel" id="email" name="email" required>
-            </div>
+    <label for="email">メールアドレス</label>
+    <input type="email" id="email" name="email" required>
+</div>
 
             <div class="form-group">
                 <label for="sex">性別</label>
-                <select id="sex" name="sex" required>
-                    <option value="">選択</option>
-                    <option value="Male">男性</option>
-                    <option value="Female">女性</option>
-                    <option value="Other">未選択</option>
-                </select>
+                <input type="text" id="sex" name="sex" required>
             </div>
 
             <div class="form-group">
-                <label for="occupation">職種(資格)</label>
-                <input type="text" id="occupation" name="occupation" required>
+                <label for="occu">職種(資格)</label>
+                <input type="text" id="occu" name="occu" required>
             </div>
 
             <div class="form-group">
-                <label for="motivation">特記事項</label>
-                <textarea id="motivation" name="motivation" required></textarea>
+                <label for="etc">特記事項</label>
+                <textarea id="etc" name="etc" required></textarea>
             </div>
 
             <!-- Uncomment below if you wish to include a photo upload field -->
