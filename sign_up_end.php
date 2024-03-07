@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <div class="txt1">ご登録が完了致しました。</div>
     <!-- ここにログインリンクを追加 -->
-    <a href="login.php">ログイン</a>
+    <a href="index.php">ログイン</a>
 
 </body>
 </html>

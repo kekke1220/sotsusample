@@ -7,13 +7,11 @@ function h($str)
 }
 
 //DB接続
-function db_conn($db_name_sotsu)
-{
+function db_conn($db_name = 'sotsu_map') {
     try {
-        $db_name = $db_name_sotsu;    //データベース名
-        $db_id   = 'root';      //アカウント名
-        $db_pw   = '';      //パスワード：XAMPPはパスワード無しに修正してください。
-        $db_host = 'localhost'; //DBホスト
+        $db_id   = 'root';      // アカウント名
+        $db_pw   = '';          // パスワード
+        $db_host = 'localhost'; // DBホスト
         $pdo = new PDO('mysql:dbname=' . $db_name . ';charset=utf8;host=' . $db_host, $db_id, $db_pw);
         return $pdo;
     } catch (PDOException $e) {

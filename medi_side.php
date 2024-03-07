@@ -13,7 +13,7 @@
   <!-- コンテンツ -->
 </div>
 
-<img src="25102633_l.jpg" alt="背景" class="img3" width="40%" height="300px">
+<img src="25102633_l.jpg" alt="背景" class="img3" width="30%" height="300px">
 
 <h1>素晴らしい資格を「もっと」活かそう</h1>
 <h2>「もっと」収入を増やし、「もっと」経験を増やす。</h2>
