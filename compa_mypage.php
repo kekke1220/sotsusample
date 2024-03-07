@@ -24,12 +24,12 @@
       <span class="lines line-3"></span>
     </label>
 
-    <a href="medi_side.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>Mot-elとは</a>
-     <a href="caution.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>利用規約</a>
-     <a href="info_henkou.php" class="menu-item green"> <i class="fa fa-coffee"></i>登録内容変更</a>
-     <a href="compa_info.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>マップ登録</a>
-     <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>
-     <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
+    <a href="compa_info.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>マップ登録</a>
+    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i></a>
+    <a href="info_henkou.php" class="menu-item green"> <i class="fa fa-coffee"></i>登録内容変更</a>
+    <a href="#" class="menu-item orange"> <i class="fa fa-star"></i></a>
+    <a href="logout.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i> ログアウト</a>
+    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i></a>
 
   </nav>
 

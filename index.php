@@ -10,7 +10,7 @@
 
 <body>
 
-
+<a href="caution.php" class="terms-button">利用規約</a> <!-- 利用規約ボタンを追加 -->
 
 <img src="24281324_m.jpg" alt="トップ画像" width="100%" height="830px">
 <div id="topname">Mot-el</div>

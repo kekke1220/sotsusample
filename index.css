@@ -242,3 +242,18 @@ a.btn--circle:hover {
   -webkit-box-shadow: 0 3px 0 #e53b4e;
   box-shadow: 0 3px 0 #e53b4e;
 }
+
+.terms-button {
+  font-size: 15px;
+  position: absolute;
+  top: 20px; /* 右上からの距離 */
+  right: 20px; /* 右上からの距離 */
+  padding: 10px 20px;
+  background-color: #4CAF50; /* ボタンの背景色 */
+  color: white; /* ボタンのテキスト色 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* 下線を除去 */
+  z-index: 1000; /* 他の要素より前面に表示 */
+}
