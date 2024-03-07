@@ -15,28 +15,33 @@
   <form name="form1" action="sign_up_end.php" method="post">
 
     <div class="form-item">
-      <input type="text" name="name" required="required" placeholder="企業名"></input>
+      <label for="name">企業名</label>
+      <input type="text" id="name" name="name" required>
     </div>
 
     <div class="form-item">
-      <input type="email" name="email" required="required" placeholder="メールアドレス"></input>
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" required>
     </div>
 
     <div class="form-item">
-      <input type="text" name="lid" required="required" placeholder="ID"></input>
+      <label for="lid">ID</label>
+      <input type="text" id="lid" name="lid" required>
     </div>
 
     <div class="form-item">
-      <input type="text" name="lpw" required="required" placeholder="Password"></input>
+      <label for="lpw">Password</label>
+      <input type="password" id="lpw" name="lpw" required>
     </div>
 
     <div class="button-panel">
-      <input type="submit" class="button" title="Sign In" value="登録"></input>
+      <input type="submit" class="button" title="Sign In" value="登録">
     </div>
 
   </form>
   
 </div>
+
 
 </body>
 </html>
