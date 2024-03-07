@@ -30,9 +30,9 @@
     <p>応募後はお互いのメールアドレスにてやりとり開始です。</p>
  </div>
 
- <img src="使い方はシンプル .jpg" alt="埋め込み画像" class="img1" width="70%" height="600px">
+ <img src="使い方はシンプル (3).jpg" alt="埋め込み画像" class="img1" width="70%" height="600px">
 
- <img src="使い方はシンプル (1).jpg" alt="埋め込み画像" class="img2" width="70%" height="600px">
+ <img src="使い方はシンプル (4).jpg" alt="埋め込み画像" class="img2" width="70%" height="600px">
 
  <img src="使い方はシンプル (2).jpg" alt="埋め込み画像" class="img4" width="70%" height="600px">
 </div>
