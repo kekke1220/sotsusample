@@ -11,14 +11,14 @@ $etc = $_POST['etc'];
 
 // データベースへの保存
 try {
-    $pdo = new PDO('mysql:dbname=sotsu_ohbo;charset=utf8;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=ohbo_form;charset=utf8;host=localhost', 'root', '');
 } catch (PDOException $e) {
     exit('DBConnectError:'.$e->getMessage());
 }
 
 $stmt = $pdo->prepare("
 INSERT INTO 
-sotsu_map(name, age, adress, email, sex, occu, etc)
+ohbo_form(name, age, adress, email, sex, occu, etc)
 VALUES(:name, :age, :adress, :email, :sex, :occu, :etc);
 ");
 
