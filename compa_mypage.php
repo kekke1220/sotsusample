@@ -30,7 +30,7 @@
     <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i></a>
     <a href="info_henkou.php" class="menu-item green"> <i class="fa fa-coffee"></i>登録内容変更</a>
     <a href="#" class="menu-item orange"> <i class="fa fa-star"></i></a>
-    <a href="ohbo_kanri.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>応募管理</a>
+    <a href="ohbo_ichiran.php" class="menu-item lightblue"> <i class="fa fa-diamond"></i>応募管理</a>
     <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i></a>
 
   </nav>
