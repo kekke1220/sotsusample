@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Infobox:showPointer&actions</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="map.css">
-</head>
-<body>
-
-<div id="myMap" style='position:relative;width:100%;height:800px;'></div>
-
-<script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=' async defer></script>
-<script>
 <?php
+require __DIR__ . '/vendor/autoload.php';
+//phpdotenvの機能を使って__DIR__=ファイルの存在する階層にある.envを指定する
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+//.env中の設定値をロードし、$_ENVとして使用できるようにする
+$dotenv->load();
+
 // データベース接続
 try {
     $pdo = new PDO('mysql:dbname=sotsu_map;charset=utf8;host=localhost','root','');
@@ -36,8 +29,25 @@ if ($status==false) {
 }
 
 // PHPの配列をJSON形式に変換
-echo "let locations = ".json_encode($locations).";";
+
 ?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Infobox:showPointer&actions</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+
+<div id="myMap" style='position:relative;width:100%;height:800px;'></div>
+
+<script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=<?= "Atv1In88jIGa2Rh_O0z0t-8fitvoytyo3GUSjNnKeyKkSb4riwvlYlpadrMwBxSw" ?>' async defer></script>
+
+<script>
+<?= "let locations = ".json_encode($locations).";"?>
+console.log(locations);
 
 function GetMap() {
     let map = new Microsoft.Maps.Map('#myMap', {
