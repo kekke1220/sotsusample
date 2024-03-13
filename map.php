@@ -5,6 +5,9 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 //.env中の設定値をロードし、$_ENVとして使用できるようにする
 $dotenv->load();
 
+//API_KEYの定義
+$API_KEY = $_ENV['API_KEY'];
+
 // データベース接続
 try {
     $pdo = new PDO('mysql:dbname=sotsu_map;charset=utf8;host=localhost','root','');
@@ -43,7 +46,7 @@ if ($status==false) {
 
 <div id="myMap" style='position:relative;width:100%;height:800px;'></div>
 
-<script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=<?= "Atv1In88jIGa2Rh_O0z0t-8fitvoytyo3GUSjNnKeyKkSb4riwvlYlpadrMwBxSw" ?>' async defer></script>
+<script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=<?= $API_KEY ?>' async defer></script>
 
 <script>
 <?= "let locations = ".json_encode($locations).";"?>
