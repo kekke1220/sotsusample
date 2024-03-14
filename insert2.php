@@ -8,7 +8,7 @@ $lpw = $_POST['lpw'];
 
 //2. DB接続します
 require_once('funcs.php');
-$pdo = db_conn('sotsusample');
+$pdo = db_conn('koukeishou_sotsusample');
 
 //３．データ登録SQL作成
 $stmt = $pdo->prepare('INSERT INTO sotsusample(name,email,lid,lpw)VALUES(:name,:email,:lid,:lpw)');

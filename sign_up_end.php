@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // データベースに接続
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=sotsusample;charset=utf8', 'root', '');
+        $pdo = new PDO('mysql:host=mysql634.db.sakura.ne.jp;dbname=koukeishou_sotsusample;charset=utf8', 'koukeishou', 'koukeishou12');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // エラーモードを例外モードに設定
     } catch (PDOException $e) {
         exit('データベースに接続できませんでした。エラー: ' . $e->getMessage());
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $stmt->execute();
         $user_id = $pdo->lastInsertId();
-        $user_url = "http://localhost/sotsusample/compa_mypage.php?id=" . $user_id; // マイページのURLを生成
+        $user_url = "http://koukeishou.sakura.ne.jp/sotsusample/compa_mypage.php?id=" . $user_id; // マイページのURLを生成
         $stmt_update = $pdo->prepare("UPDATE sotsusample SET mypage_url = :user_url WHERE id = :user_id");
         $stmt_update->bindParam(':user_url', $user_url, PDO::PARAM_STR);
         $stmt_update->bindParam(':user_id', $user_id, PDO::PARAM_INT);

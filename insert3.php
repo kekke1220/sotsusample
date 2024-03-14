@@ -14,7 +14,7 @@ $etc = $_POST['etc'];
 
 // データベースへの保存
 try {
-    $pdo = new PDO('mysql:dbname=sotsu_map;charset=utf8;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:host=mysql634.db.sakura.ne.jp;dbname=koukeishou_sotsusample;charset=utf8', 'koukeishou', 'koukeishou12');
 } catch (PDOException $e) {
     exit('DBConnectError:'.$e->getMessage());
 }

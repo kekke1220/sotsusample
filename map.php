@@ -10,7 +10,7 @@ $API_KEY = $_ENV['API_KEY'];
 
 // データベース接続
 try {
-    $pdo = new PDO('mysql:dbname=sotsu_map;charset=utf8;host=localhost','root','');
+    $pdo = new PDO('mysql:dbname=koukeishou_sotsusample;charset=utf8;host=mysql634.db.sakura.ne.jp','koukeishou','koukeishou12');
 } catch (PDOException $e) {
     exit('DBConnectError:'.$e->getMessage());
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="compa_mypage.css">
-    <title>Document</title>
+    <title>企業様専用ページ</title>
 </head>
 <body>
 

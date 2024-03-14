@@ -7,12 +7,18 @@ function h($str)
 }
 
 //DB接続
-function db_conn($db_name = 'sotsu_map') {
+function db_conn() {
     try {
-        $db_id   = 'root';      // アカウント名
-        $db_pw   = '';          // パスワード
-        $db_host = 'localhost'; // DBホスト
-        $pdo = new PDO('mysql:dbname=' . $db_name . ';charset=utf8;host=' . $db_host, $db_id, $db_pw);
+        $db_name = 'koukeishou_sotsusample';
+        $db_host = 'mysql634.db.sakura.ne.jp';
+        $db_id   = 'koukeishou';      // アカウント名
+        $db_pw   = 'koukeishou12';    // パスワード
+
+        // $db_id   = 'root';      // アカウント名
+        // $db_pw   = '';          // パスワード
+        // $db_host = 'localhost'; // DBホスト
+        $server_info ='mysql:dbname='.$db_name.';charset=utf8;host='.$db_host;
+        $pdo = new PDO($server_info, $db_id, $db_pw);
         return $pdo;
     } catch (PDOException $e) {
         exit('DB Connection Error:' . $e->getMessage());

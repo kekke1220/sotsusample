@@ -20,7 +20,7 @@ loginCheck();
 
 //２．データ登録SQL作成
 // $pdo = db_conn();
-$pdo = db_conn('sotsu_map');
+$pdo = db_conn('koukeishou_sotsusample');
 $stmt = $pdo->prepare('SELECT * FROM sotsu_map');
 $status = $stmt->execute();
 

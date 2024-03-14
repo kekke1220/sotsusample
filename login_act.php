@@ -9,7 +9,7 @@ $lpw = $_POST['lpw'];
 
 //1.  DB接続します
 require_once('funcs.php');
-$pdo = db_conn('sotsusample');
+$pdo = db_conn();
 
 //2. データ登録SQL作成
 // gs_user_table1に、IDとWPがあるか確認する。
@@ -31,7 +31,7 @@ $val = $stmt->fetch();
         $_SESSION['chk_ssid'] = session_id();
         $_SESSION['name'] = $val['name'];
         // 新たにログインしたユーザーのマイページにリダイレクト
-        header('Location: http://localhost/sotsusample/compa_mypage.php?id=' . $val['id']);
+        header('Location: http://koukeishou.sakura.ne.jp/sotsusample/compa_mypage.php?id=' . $val['id']);
         exit(); // リダイレクトしたらスクリプトの実行を終了する
     } else {
         //Login失敗時(Logout経由)
