@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>登録完了ページ</title>
+    <title>登録完了</title>
    <style>
     body, html {
     height: 100%;

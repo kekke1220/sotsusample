@@ -38,7 +38,7 @@ if ($status==false) {
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>Infobox:showPointer&actions</title>
+    <title>マップ検索</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="map.css">
 </head>
