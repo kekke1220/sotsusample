@@ -102,7 +102,7 @@ if ($status == false) {
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="compa_info.php" class="btn-style">データ登録</a>
-                    <a href="select.php" class="btn-style">トップページ</a>
+                    <a href="compa_mypage.php" class="btn-style">マイページ</a>
                 </div>
             </div>
         </nav>
