@@ -28,7 +28,7 @@
     </label>
 
     <a href="medi_side.php" class="menu-item green"> <i class="fa fa-coffee"></i>Mot-elとは</a> 
-    <a href="#" class="menu-item orange"> <i class="fa fa-star"></i></a>
+    <a href="index.php" class="menu-item orange"> <i class="fa fa-star"></i>トップページ</a>
     <a href="map.php" class="menu-item green"> <i class="fa fa-coffee"></i> マップ検索</a>
     <a href="#" class="menu-item orange"> <i class="fa fa-star"></i></a>
     <a href="contactform.php" class="menu-item orange"> <i class="fa fa-star"></i> お問い合わせ</a>

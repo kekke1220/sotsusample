@@ -55,7 +55,7 @@ p {
 <div class="container">
     <h1>応募完了</h1>
     <p>応募先からのメールをお待ちください。</p>
-    <a href="select.php" class="button">トップページに戻る</a>
+    <a href="select.php" class="button">ホームに戻る</a>
 </div>
 
 </body>
