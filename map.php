@@ -54,7 +54,7 @@ console.log(locations);
 
 function GetMap() {
     let map = new Microsoft.Maps.Map('#myMap', {
-        zoom: 14
+        zoom: 15
     });
 
     navigator.geolocation.getCurrentPosition(function(position) {
