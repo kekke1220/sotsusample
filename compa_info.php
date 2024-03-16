@@ -96,6 +96,8 @@
                 <input type="text" id="adress" name="adress" required>
             </div>
 
+            <a href="https://www.bing.com/maps?cp=35.687976%7E139.601212&lvl=11.0">※緯度・経度検索(対象地に合わせ右クリック)</a><br>
+
             <div class="form-group">
                 <label for="lat">緯度</label>
                 <input type="text" id="lat" name="lat" required>

@@ -12,7 +12,7 @@
 
 <a href="caution.php" class="terms-button">利用規約</a> <!-- 利用規約ボタンを追加 -->
 
-<img src="24281324_m.jpg" alt="トップ画像" width="100%" height="830px">
+<img src="24281324_m.jpg" alt="トップ画像" width="100%" height="850px">
 <div id="topname">Mot-el</div>
 <div id="topsub">医療従事者と医療関連ジョブの副業マッチングサイト</div>
 
