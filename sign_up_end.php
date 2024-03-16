@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_update->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt_update->execute();
         // 登録後にマイページにリダイレクトする
-        header("Location: $user_url");
+        header("Location: index.php");
         exit; // リダイレクトしたらスクリプトの実行を終了する
     } catch (PDOException $e) {
         exit('データベースへの挿入に失敗しました。エラー: ' . $e->getMessage());
