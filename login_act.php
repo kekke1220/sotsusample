@@ -35,7 +35,7 @@ $val = $stmt->fetch();
         exit(); // リダイレクトしたらスクリプトの実行を終了する
     } else {
         //Login失敗時(Logout経由)
-        header('Location: login.php');
+        header('Location: index.php');
         exit(); // リダイレクトしたらスクリプトの実行を終了する
     }
 

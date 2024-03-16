@@ -35,27 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_update->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt_update->execute();
         // 登録後にマイページにリダイレクトする
-        header("Location: index.php");
+        header("Location: sign_up_ok.php");
         exit; // リダイレクトしたらスクリプトの実行を終了する
     } catch (PDOException $e) {
         exit('データベースへの挿入に失敗しました。エラー: ' . $e->getMessage());
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sign_up_end.css">
-    <title>登録完了</title>
-</head>
-<body>
-    
-    <div class="txt1">ご登録が完了致しました。</div>
-    <!-- ここにログインリンクを追加 -->
-    <a href="index.php">ログイン</a>
-
-</body>
-</html>
