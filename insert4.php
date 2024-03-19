@@ -1,4 +1,4 @@
- <?php
+<?php
 
 // 1. POSTデータ取得
 $name = $_POST['name'];

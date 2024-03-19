@@ -1,4 +1,4 @@
- <?php
+<?php
 // 0. SESSION開始！！
 session_start();
 // 1. ログインチェック処理！
