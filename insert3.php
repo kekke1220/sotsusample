@@ -1,4 +1,6 @@
 <?php
+// セッション開始
+session_start();
 
 // 1. POSTデータ取得
 $name = $_POST['name'];
@@ -11,6 +13,7 @@ $money = $_POST['money'];
 $job = $_POST['job'];
 $time = $_POST['time'];
 $etc = $_POST['etc'];
+$account_id = $_SESSION['account_id']; // 現在ログインしているユーザーのアカウントID
 
 // データベースへの保存
 try {
@@ -21,8 +24,8 @@ try {
 
 $stmt = $pdo->prepare("
 INSERT INTO 
-sotsu_map(name, adress, hp, lat, lng, tell, money, job, time, etc)
-VALUES(:name, :adress, :hp, :lat, :lng, :tell, :money, :job, :time, :etc);
+sotsu_map(name, adress, hp, lat, lng, tell, money, job, time, etc, account_id)
+VALUES(:name, :adress, :hp, :lat, :lng, :tell, :money, :job, :time, :etc, :account_id);
 ");
 
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -35,6 +38,7 @@ $stmt->bindValue(':money', $money, PDO::PARAM_STR);
 $stmt->bindValue(':job', $job, PDO::PARAM_STR);
 $stmt->bindValue(':time', $time, PDO::PARAM_STR);
 $stmt->bindValue(':etc', $etc, PDO::PARAM_STR);
+$stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT); // アカウントIDをバインド
 
 $status = $stmt->execute();
 

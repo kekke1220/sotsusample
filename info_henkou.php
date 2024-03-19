@@ -21,7 +21,9 @@ loginCheck();
 //２．データ登録SQL作成
 // $pdo = db_conn();
 $pdo = db_conn('koukeishou_sotsusample');
-$stmt = $pdo->prepare('SELECT * FROM sotsu_map');
+$account_id = $_SESSION['account_id']; // ログインしているアカウントのIDをセッションから取得
+$stmt = $pdo->prepare('SELECT * FROM sotsu_map WHERE account_id = :account_id'); // account_id を条件に追加
+$stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
 //３．データ表示

@@ -30,6 +30,7 @@ $val = $stmt->fetch();
         //Login成功時 該当レコードがあればSESSIONに値を代入
         $_SESSION['chk_ssid'] = session_id();
         $_SESSION['name'] = $val['name'];
+        $_SESSION['account_id'] = $val['id']; // ここでアカウントIDをセッションに保存します。
         // 新たにログインしたユーザーのマイページにリダイレクト
         header('Location: http://koukeishou.sakura.ne.jp/sotsusample/compa_mypage.php?id=' . $val['id']);
         exit(); // リダイレクトしたらスクリプトの実行を終了する
