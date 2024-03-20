@@ -77,10 +77,9 @@ function GetMap() {
         subTitle: location.adress
     });
 
-    // 例: PDFファイルへの直接リンクを使用
     let description = `<a href="${location.hp}">HP</a><br>` +
                   `<a href="kyujin_hyoji.php?id=${location.ID}">求人票</a><br>` +
-                  `<a href="ohbo.php">応募</a>`;
+                  `<a href="ohbo.php?hospital_id=${location.account_id}">応募</a>`;
 
     let infobox = new Microsoft.Maps.Infobox(loc, {
         title: location.name,

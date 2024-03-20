@@ -127,6 +127,10 @@
                 <textarea id="etc" name="etc" required></textarea>
             </div>
 
+            <!-- 医療機関IDを隠しフィールドで追加 -->
+<input type="hidden" name="hospital_id" value="<?php echo htmlspecialchars($_GET['hospital_id']); ?>">
+
+
             <!-- Uncomment below if you wish to include a photo upload field -->
             <!-- <div class="form-group">
                 <label for="photo">Photo:</label>

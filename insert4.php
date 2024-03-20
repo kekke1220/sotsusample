@@ -8,6 +8,7 @@ $email = $_POST['email'];
 $sex = $_POST['sex'];
 $occu = $_POST['occu'];
 $etc = $_POST['etc'];
+$hospital_id = $_POST['hospital_id'];
 
 // データベースへの保存
 try {
@@ -16,11 +17,7 @@ try {
     exit('DBConnectError:'.$e->getMessage());
 }
 
-$stmt = $pdo->prepare("
-INSERT INTO 
-ohbo_form(name, age, adress, email, sex, occu, etc)
-VALUES(:name, :age, :adress, :email, :sex, :occu, :etc);
-");
+$stmt = $pdo->prepare("INSERT INTO ohbo_form (name, age, adress, email, sex, occu, etc, hospital_id) VALUES (:name, :age, :adress, :email, :sex, :occu, :etc, :hospital_id)");
 
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':age', $age, PDO::PARAM_STR);
@@ -29,6 +26,7 @@ $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':sex', $sex, PDO::PARAM_STR);
 $stmt->bindValue(':occu', $occu, PDO::PARAM_STR);
 $stmt->bindValue(':etc', $etc, PDO::PARAM_STR);
+$stmt->bindValue(':hospital_id', $hospital_id, PDO::PARAM_INT);
 
 $status = $stmt->execute();
 

@@ -1,41 +1,49 @@
 <?php
 // 0. SESSION開始！！
 session_start();
-// 1. ログインチェック処理！
-// 以下、セッションID持ってたら、ok
-// 持ってなければ、閲覧できない処理にする。
 
-// funcs.phpに記載したため削除
-// if( !isset($_SESSION['chk_ssid']) ||  $_SESSION['chk_ssid'] !== session_id() ){
-//     exit('LOGIN ERROR');
-// } else{
-//     // ログイン済処理
-//     session_regenerate_id(true);
-//     $_SESSION['chk_ssid'] = session_id();
-// }
+// 1. ログインチェック処理
+// ログインしているかどうかのセッションチェックを行う
+if (!isset($_SESSION['chk_ssid']) || $_SESSION['chk_ssid'] != session_id()) {
+    exit('LOGIN ERROR: Please login again.');
+} else {
+    // ログイン済の処理
+    session_regenerate_id(true);
+    $_SESSION['chk_ssid'] = session_id();
+}
 
-//１．関数群の読み込み
+// 2. 必要なファイルを読み込む
 require_once('funcs.php');
 loginCheck();
 
-//２．データ登録SQL作成
-// $pdo = db_conn();
-$pdo = db_conn('ohbo_form');
-$stmt = $pdo->prepare('SELECT * FROM ohbo_form');
+// ログインしている医療機関のIDをセッションから取得
+$hospital_id = $_SESSION['hospital_id'];
+
+// データベース接続
+$pdo = db_conn();
+
+// 応募情報を取得するSQLの準備
+$stmt = $pdo->prepare('SELECT * FROM ohbo_form WHERE hospital_id = :hospital_id');
+$stmt->bindValue(':hospital_id', $hospital_id, PDO::PARAM_INT);
+
+// SQLの実行
 $status = $stmt->execute();
 
-//３．データ表示
+// データ表示
 $view = '';
 if ($status == false) {
+    // SQL実行時にエラーがある場合
     sql_error($stmt);
 } else {
+    // SQL実行時にエラーがない場合、データの取得
     while ($r = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $view .= '<p>';
-        $view .= '<a href="detail2.php?id=' . $r["id"] . '" class="btn-style">' . h($r['name']) . " " . h($r['adress']) . '</a>';
+        $view .= '<a href="detail2.php?id=' . h($r['id']) . '">' . h($r['name']) . ' ' . h($r['adress']) . '</a>';
         $view .= '</p>';
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
