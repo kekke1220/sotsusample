@@ -93,6 +93,12 @@
             </div> -->
 
             <div class="form-group">
+                <label for="ohbo_hospital">応募病院</label>
+                <input type="text" id="ohbo_hospital" name="ohbo_hospital" required>
+            </div>
+
+     
+            <div class="form-group">
                 <label for="name">氏名(カナ)</label>
                 <input type="text" id="name" name="name" required>
             </div>

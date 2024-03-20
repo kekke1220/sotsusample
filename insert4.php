@@ -1,6 +1,7 @@
 <?php
 
 // 1. POSTデータ取得
+$ohbo_hospital = $_POST['ohbo_hospital'];
 $name = $_POST['name'];
 $age = $_POST['age'];
 $adress = $_POST['adress'];
@@ -17,8 +18,9 @@ try {
     exit('DBConnectError:'.$e->getMessage());
 }
 
-$stmt = $pdo->prepare("INSERT INTO ohbo_form (name, age, adress, email, sex, occu, etc, hospital_id) VALUES (:name, :age, :adress, :email, :sex, :occu, :etc, :hospital_id)");
+$stmt = $pdo->prepare("INSERT INTO ohbo_form (ohbo_hospital, name, age, adress, email, sex, occu, etc, hospital_id) VALUES (:ohbo_hospital, :name, :age, :adress, :email, :sex, :occu, :etc, :hospital_id)");
 
+$stmt->bindValue(':ohbo_hospital', $ohbo_hospital, PDO::PARAM_STR);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':age', $age, PDO::PARAM_STR);
 $stmt->bindValue(':adress', $adress, PDO::PARAM_STR);

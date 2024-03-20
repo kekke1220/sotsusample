@@ -38,7 +38,7 @@ if ($status == false) {
     // SQL実行時にエラーがない場合、データの取得
     while ($r = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $view .= '<p>';
-        $view .= '<a href="detail2.php?id=' . h($r['id']) . '">' . h($r['name']) . ' ' . h($r['adress']) . '</a>';
+        $view .= '<a href="detail2.php?id=' . h($r['id']) . '">'  .'応募病院：'. h($r['ohbo_hospital']) .'  '. '名前：' . h($r['name']) . '</a>';
         $view .= '</p>';
     }
 }

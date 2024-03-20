@@ -88,6 +88,7 @@ if (!$result) {
     <div class="container">
         <div class="info">
             <h2>応募票</h2>
+            <div><label for="ohbo_hospital">応募病院</label><span id="ohbo_hospital" class="text-area"><?php echo htmlspecialchars($result['ohbo_hospital'], ENT_QUOTES); ?></span></div>
             <div><label for="name">お名前</label><span id="name" class="text-area"><?php echo htmlspecialchars($result['name'], ENT_QUOTES); ?></span></div>
             <div><label for="age">年齢</label><span id="adress" class="text-area"><?php echo htmlspecialchars($result['age'], ENT_QUOTES); ?></span></div>
             <div><label for="adress">住所</label><span id="tell" class="text-area"><?php echo htmlspecialchars($result['adress'], ENT_QUOTES); ?></span></div>
